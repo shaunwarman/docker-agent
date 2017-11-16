@@ -1,0 +1,22 @@
+version: '3'
+services:
+  # agent:
+  #   build: ..
+  #   container_name: agent
+  influxdb:
+    image: tutum/influxdb
+    container_name: influxdb
+    # depends_on:
+    #   - agent
+    ports:
+      - 8086:8086
+    environment:
+      - PRE_CREATE_DB=mydb
+  grafana:
+    build:
+      context: ./grafana
+      args:
+        DOWNLOAD_URL: https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.2.0_amd64.deb
+    container_name: grafana
+    ports:
+      - 3000:3000

@@ -1,0 +1,21 @@
+{
+  "name": "agent",
+  "version": "1.0.0",
+  "description": "A docker agent for stats and event collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docker",
+    "agent",
+    "node.js",
+    "event"
+  ],
+  "author": "Shaun Warman",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "influx-client": "0.0.2"
+  }
+}
